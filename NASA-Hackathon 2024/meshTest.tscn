@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdbp5e0h5n2c0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_oaupp"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2pje5"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, -1, -4)
+mesh = SubResource("SphereMesh_oaupp")
+surface_material_override/0 = SubResource("StandardMaterial3D_2pje5")

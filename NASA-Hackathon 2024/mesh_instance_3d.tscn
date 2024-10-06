@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=4 uid="uid://cv3ctduf8u0ij"]
+
+[ext_resource type="Texture2D" uid="uid://dceclec5k7fle" path="res://icon.svg" id="1_7ad16"]
+[ext_resource type="Script" path="res://MeshGen.gd" id="2_i6npq"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2kumw"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 1, 1, 1),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAIA/AAAAAAAAgD8AAIA/AAAAAAAAgD8AAAAAAACAPwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAA=="),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAwACAAQAAgAFAAQAAgABAAUAAQAGAAUAAQAHAAYAAQAAAAcAAAADAAQABwAAAAQABQAGAAcABwAEAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAACAPwAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAAAAMjPMzOxEYadl5szM2ra2rZmZMrPsRCa2VFWqqv9//5/MTGZm2ra2rTKzzEzsRGGnVNWqKv9//58yM5kZ7EQmtg==")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dung"]
+albedo_texture = ExtResource("1_7ad16")
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(1, -0.000581979, 0.000461827, 0.000582348, 1, -0.000786607, -0.000461361, 0.00078688, 1, -1.65296, -6.8346, 0)
+mesh = SubResource("ArrayMesh_2kumw")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7dung")
+script = ExtResource("2_i6npq")
